@@ -1,4 +1,5 @@
-const app = require('./app')
+const app = require('./app');
+const cors = require('cors');
 
 const connectToDB = require('./config/db');
 
