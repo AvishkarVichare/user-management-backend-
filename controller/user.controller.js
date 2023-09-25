@@ -17,7 +17,10 @@ exports.getUserController = async(req, res)=>{
         });
       } catch (error) {
         console.error(error);
-        res.status(500).json({ message: 'Server error' });
+        res.status(500).json({ 
+            success: false,
+            message: 'Server error'
+         });
       }
 }
 
@@ -32,9 +35,16 @@ exports.createUserController = async (req, res) => {
   
       await newUser.save();
   
-      res.status(201).json(newUser);
+      res.status(201).json({
+        success: true,
+        message: 'Successfully created a new user',
+        user: newUser,
+      });
     } catch (error) {
       console.error(error);
-      res.status(500).json({ message: 'Server error' });
+      res.status(500).json({
+        success: false,
+        message: 'Server error',
+       });
     }
   }
