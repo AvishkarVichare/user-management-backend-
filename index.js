@@ -1,10 +1,14 @@
+require('dotenv').config()
 const app = require('./app');
-const cors = require('cors');
+const Port = process.env.PORT;
 
+// importing DB connection function 
 const connectToDB = require('./config/db');
 
+// calling our db connection function 
 connectToDB();
 
-app.listen(8000,()=>{
+// listening to port 
+app.listen(Port,()=>{
     console.log("connected")
 })

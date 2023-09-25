@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
-const uri = 'mongodb+srv://avi:12345@cluster0.eeitc2w.mongodb.net/usermn?retryWrites=true&w=majority';
 
+// URI for mongodb atlas 
+const uri = process.env.MONGO_URI;
+
+//mongodb connection using mongoose
 const connectToDB = ()=>{
     mongoose.connect(uri, {
         useNewUrlParser:true,

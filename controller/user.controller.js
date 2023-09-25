@@ -27,7 +27,7 @@ exports.getUserController = async(req, res)=>{
 /***************************************************************************************
  @POST
  @createUser
- takes name of user
+ takes: name
  Add user in DB.
 ***************************************************************************************/
 exports.createUserController = async (req, res) => {
@@ -54,7 +54,7 @@ exports.createUserController = async (req, res) => {
   /***************************************************************************************
    @DELETE
    @deleteUser
-   takes Id of user 
+   takes: Id of user from params
    removes user.
   ***************************************************************************************/
  exports.deleteUserController = async(req, res)=>{
@@ -88,7 +88,7 @@ exports.createUserController = async (req, res) => {
  /***************************************************************************************
    @PUT
    @editUser
-   takes Id of user 
+   takes: Id of user from params , updated data from req.body
    edits user.
   ***************************************************************************************/
  exports.editUserCotroller = async(req, res)=>{
